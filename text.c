@@ -827,9 +827,89 @@
 
 // 编写一个函数实现该功能：从键盘输入一个字串符， 再输入两个正整数 m 和 n, 输出
 // 字符串中从 m 开始， 连续 n 个字符。例如， 输入 abcdefg,2,3,输出 bcd.
+// #include <stdio.h>
+// int main()
+// {
+
+//     char a[100];
+//     int i = 0;
+//     int j = 0;
+//     int k = 0;
+//     printf("输入一个字符串：");
+//     scanf("%s", a);
+//     printf("输入两个正整数");
+//     scanf("%d%d", &i, &j);
+//     for (k = i - 1; k <= j - 1; k++)
+//     {
+//         printf("%c", a[k]);
+//     }
+//     return 0;
+// }
+
+// 写一个功能函数。字符串的连接。 "hello" "world"把两个字符串连接成一个字符串，并
+// 且返回连接好的字符串的首地址。 //仿写：char *strcat(char *dest, const char *src)
+
+// #include <stdio.h>
+// char *mystrcat(char *dest, const char *src)
+// {
+//     int i = 0;
+//     int k = 0;
+//     while (*dest != '\0')
+//     {
+//         dest++;
+//     }
+//     while (*src != '\0')
+//     {
+//         *dest = *src;
+//         dest++;
+//         src++;
+//     }
+//     *dest = '\0';
+//     return dest;
+// }
+// int main()
+// {
+//     char a[100];
+//     char b[100];
+//     scanf("%s", a);
+//     scanf("%s", b);
+//     mystrcat(a, b);
+//     printf("%s", a);
+//     return 0;
+// }
+
+// 用递归方法求 n!
+// 妙
 #include <stdio.h>
+int sum(int num)
+{
+    if (num == 1)
+    {
+        return num;
+    }
+    return num * sum(num - 1);
+}
 int main()
 {
-
+    int a = 0;
+    scanf("%d", &a);
+    printf("%d", sum(a));
     return 0;
+}
+
+// 使用递归实现一个十进制数转二进制的功能
+
+#include <stdio.h>
+int change(int i)
+{
+    int a[100];
+    int *p = a;
+    if (i / 2 == 0)
+    {
+        return;
+    }
+}
+
+int main()
+{
 }
