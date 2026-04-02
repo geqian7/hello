@@ -880,36 +880,36 @@
 
 // 用递归方法求 n!
 // 妙
-#include <stdio.h>
-int sum(int num)
-{
-    if (num == 1)
-    {
-        return num;
-    }
-    return num * sum(num - 1);
-}
-int main()
-{
-    int a = 0;
-    scanf("%d", &a);
-    printf("%d", sum(a));
-    return 0;
-}
+// #include <stdio.h>
+// int sum(int num)
+// {
+//     if (num == 1)
+//     {
+//         return num;
+//     }
+//     return num * sum(num - 1);
+// }
+// int main()
+// {
+//     int a = 0;
+//     scanf("%d", &a);
+//     printf("%d", sum(a));
+//     return 0;
+// }
 
-// 使用递归实现一个十进制数转二进制的功能
+// // 使用递归实现一个十进制数转二进制的功能
 
-#include <stdio.h>
-int change(int i)
-{
-    int a[100];
-    int *p = a;
-    if (i / 2 == 0)
-    {
-        return;
-    }
-}
+// #include <stdio.h>
+// int change(int i)
+// {
+//     int a[100];
+//     int *p = a;
+//     if (i / 2 == 0)
+//     {
+//         return;
+//     }
+// }
 
-int main()
-{
-}
+// int main()
+// {
+// }
