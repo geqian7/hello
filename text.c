@@ -805,38 +805,31 @@
 // }
 
 // 用函数实现求 1+1/2+1/3+1/4+……1/n 的值！
+// #include <stdio.h>
+// float sum(int a)
+// {
+//     float i = 1;
+//     float j = 0;
+//     for (i = 1; i <= a; i++)
+//     {
+//         j += 1.0 / i;
+//     }
+//     return j;
+// }
+// int main()
+// {
+//     int i = 0;
+//     int j = 0;
+//     scanf("%d", &i);
+//     printf("%f", sum(i));
+//     return 0;
+// }
+
+// 编写一个函数实现该功能：从键盘输入一个字串符， 再输入两个正整数 m 和 n, 输出
+// 字符串中从 m 开始， 连续 n 个字符。例如， 输入 abcdefg,2,3,输出 bcd.
 #include <stdio.h>
-float sum(int a)
-{
-    float i = 1;
-    float j = 0;
-    for (i = 1; i <= a; i++)
-    {
-        j += 1.0 / i;
-    }
-    return j;
-}
 int main()
 {
-    int i = 0;
-    int j = 0;
-    scanf("%d", &i);
-    printf("%f", sum(i));
+
     return 0;
 }
-
-// 作业 1 1 ：
-// 1 1 课后作业 第 第 0 1--10  题
-// 2 2 求两个数的最大公约数，和最小公倍数
-// 3 3 r char r *strcat(char t *p1,const r char  *p2);
-// 4 4 r char r *strcpy(char t *p1,const r char  *p2) ；
-// 5 5 t int t strlen(const r char  *s);
-// 6 6 t int t strcmp(const r char , *s1, t const r char  *s2);
-// 7 7 十进制转二进制( ( 主函数中定义十进制数 ， 在子函数中定义二进制数的对应的数组 ， 求完二进制之
-// 后，将数组返回给主函数输出！ );
-// 作业 2 2 ：
-// ① 递归实现年龄问题
-// ② 递归实现 n n ！
-// ③ 递归实现字符串逆序输出( ( 不写返回值，单字符输出）
-// ④ 递归实现十进制转二进制( ( 不写返回值，求出来一个打印一个) )
-// ⑤ 完成上述作业之后，随便找 3 2-3  个 题，定义指针指向函数，通过指针调用函数
