@@ -746,6 +746,11 @@
 // #include <stdio.h>
 // int sum(int m, int n)
 // {
+//     if(m>n)
+//     {
+//         printf("输入错误");
+//         return -1;
+//     }
 //     int k = 0;
 //     while (m <= n)
 //     {
@@ -830,7 +835,6 @@
 // #include <stdio.h>
 // int main()
 // {
-
 //     char a[100];
 //     int i = 0;
 //     int j = 0;
@@ -900,28 +904,162 @@
 // // 使用递归实现一个十进制数转二进制的功能
 
 // #include <stdio.h>
-// int change(int i)
+// int change(int num)
 // {
-//     int a[100];
-//     int *p = a;
-//     if (i / 2 == 0)
+//     if (num > 0)
 //     {
-//         return;
+//         change(num / 2);
+//         printf("%d", num % 2);
 //     }
 // }
-
 // int main()
 // {
+//     int a = 0;
+//     scanf("%d", &a);
+//     change(a);
+//     return 0;
 // }
 
+// 求两个数的最大公约数，和最小公倍数
+// #include <stdio.h>
+// int min(int a, int b)
+// {
+//     if (a > b)
+//     {
+//         return b;
+//     }
+//     else
+//     {
+//         return a;
+//     }
+// }
+// int get_max_min(int i, int j)
+// {
+//     int a = min(i, j);
+//     int b;
+//     int c;
+//     for (b = 1; b <= a; b++)
+//     {
+//         if (i % b == 0 && j % b == 0)
+//         {
+//             c = b;
+//         }
+//     }
+//     printf("最大公约数是%d", c);
+//     printf("最大公倍数是%d", i * j / c);
+// }
+// int main()
+// {
+//     int a = 0;
+//     int b = 0;
+//     printf("请输入两个数");
+//     scanf("%d%d", &a, &b);
+//     get_max_min(a, b);
+//     return 0;
+// }
+
+// char r *strcat(char t *p1,const r char  *p2);
+// #include <stdio.h>
+// char *mystrcat(char *a, char *b)
+// {
+//     char *p = a;
+//     while (*a != '\0')
+//     {
+//         a++;
+//     }
+//     while (*b != '\0')
+//     {
+//         *a = *b;
+//         a++;
+//         b++;
+//     }
+//     *a = '\0';
+//     return p;
+// }
+// int main()
+// {
+//     char str1[1024];
+//     char str2[1024];
+//     scanf("%s%s", str1, str2);
+//     mystrcat(str1, str2);
+//     printf("%s", str1);
+//     return 0;
+// }
+
+// char r *strcpy(char t *p1,const r char  *p2)
+// #include <stdio.h>
+// char *mystrcpy(char *p1, char *p2)
+// {
+//     char *p = p1;
+//     while (*p2 != '\0')
+//     {
+//         *p1 = *p2;
+//         p1++;
+//         p2++;
+//     }
+//     return p1;
+// }
+// int main()
+// {
+//     char str1[1024];
+//     char str2[1024];
+//     scanf("%s", str1);
+//     scanf("%s", str2);
+//     mystrcpy(str1, str2);
+//     printf("%s", str1);
+//     return 0;
+// }
+
+// int t strlen(const r char  *s);
+
+// #include <stdio.h>
+// int mystrlen(char *str)
+// {
+//     int i = 0;
+//     while (*str != '\0')
+//     {
+//         str++;
+//         i++;
+//     }
+//     return i;
+// }
+// int main()
+// {
+//     char str[1024];
+//     scanf("%s", str);
+//     printf("%d", mystrlen(str));
+//     return 0;
+// }
+
+// int t strcmp(const r char , *s1, t const r char  *s2);
+// #include <stdio.h>
+// int mystrcmp(char *str1, char *str2)
+// {
+//     while ((*str1 == *str2) && *str1 && *str2)
+//     {
+//         str1++;
+//         str2++;
+//     }
+//     return *str1 - *str2;
+// }
+// int main()
+// {
+//     char str1[1024];
+//     char str2[1024];
+//     scanf("%s", str1);
+//     scanf("%s", str2);
+//     printf("%d", mystrcmp(str1, str2));
+//     return 0;
+// }
+
+// 十进制转二进制( ( 主函数中定义十进制数 ， 在子函数中定义二进制数的对应的数组 ， 求完二进制之
+// 后，将数组返回给主函数输出！ );
 #include <stdio.h>
-#include "add.h"
-int main()
-{
-    int a = 0;
-    int b = 0;
-    scanf("%d%d", &a, &b);
-    int sum = add(a, b);
-    printf("%d", sum);
-    return 0;
-}
+int change(int num)
+
+    // 作业 2 2 ：
+    // ① 递归实现年龄问题
+    // ② 递归实现 n n ！
+    // ③ 递归实现字符串逆序输出( ( 不写返回值，单字符输出）
+    // ④ 递归实现十进制转二进制( ( 不写返回值，求出来一个打印一个) )
+    // ⑤ 完成上述作业之后，随便找 3 2-3  个 题，定义指针指向函数，通过指针调用函数
