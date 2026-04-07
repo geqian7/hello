@@ -1054,12 +1054,197 @@
 
 // 十进制转二进制( ( 主函数中定义十进制数 ， 在子函数中定义二进制数的对应的数组 ， 求完二进制之
 // 后，将数组返回给主函数输出！ );
-#include <stdio.h>
-int change(int num)
+// #include <stdio.h>
+// int change(int num)
 
-    // 作业 2 2 ：
-    // ① 递归实现年龄问题
-    // ② 递归实现 n n ！
-    // ③ 递归实现字符串逆序输出( ( 不写返回值，单字符输出）
-    // ④ 递归实现十进制转二进制( ( 不写返回值，求出来一个打印一个) )
-    // ⑤ 完成上述作业之后，随便找 3 2-3  个 题，定义指针指向函数，通过指针调用函数
+// 求字符串长度，在不使用临时变量的前提下
+// #include <stdio.h>
+// int strlenth(char *str)
+// {
+//     int count = 0;
+//     while (*str != '\0')
+//     {
+//         count++;
+//         str++;
+//     }
+//     return count;
+// }
+// int main()
+// {
+//     char str[1024];
+//     scanf("%s", str);
+//     printf("%d", strlenth(str));
+//     return 0;
+// }
+// 递归的方式求解
+// #include <stdio.h>
+// int strlenth(char *str)
+// {
+//     if (*str != '\0')
+//     {
+//         return 1 + strlenth(++str);
+//     }
+// }
+// int main()
+// {
+//     char str[1024];
+//     scanf("%s", str);
+//     printf("%d", strlenth(str));
+//     return 0;
+// }
+
+// 作业 2 2 ：
+// ① 递归实现年龄问题
+// ② 递归实现 n n ！
+// #include <stdio.h>
+// int jiecheng(int n)
+// {
+//     if (n > 1)
+//     {
+//         return n * jiecheng(n - 1);
+//     }
+// }
+// int main()
+// {
+//     int n = 0;
+//     scanf("%d", &n);
+//     printf("%d", jiecheng(n));
+//     return 0;
+// }
+
+// ③ 递归实现字符串逆序输出( ( 不写返回值，单字符输出）
+// ④ 递归实现十进制转二进制( ( 不写返回值，求出来一个打印一个) )
+// ⑤ 完成上述作业之后，随便找 3 2-3  个 题，定义指针指向函数，通过指针调用函数
+
+// 水果营销商卖水果，苹果 5 块一斤，葡萄 6.8 块 1 斤，香蕉 5.2 一斤，消费者输入买入
+// 斤数即可得到总价，利用程序实现
+// #include <stdio.h>
+// float sum(float a, float b, float c)
+// {
+//     float i;
+//     i = a * 5.0 + b * 6.8 + c * 5.2;
+//     return i;
+// }
+// int main()
+// {
+//     float a, b, c;
+//     printf("请输入要买苹果斤数");
+//     scanf("%f", &a);
+//     printf("请输入要买葡萄斤数");
+//     scanf("%f", &b);
+//     printf("请输入要买香蕉斤数");
+//     scanf("%f", &c);
+//     printf("总价为%.3f", sum(a, b, c));
+//     return 0;
+// }
+
+// 定义一个结构体变量（包括年、月、日）。计算该日在本年中是第几天，注意闰年问题。
+// #include <stdio.h>
+// struct time
+// {
+//     int year;
+//     int month;
+//     int day;
+// };
+// int theday(int a, int b, int c)
+// {
+//     int i = 0;
+//     switch (b)
+//     {
+//     case 1:
+//         i = c;
+//         break;
+//     case 2:
+//         i = 31 + c;
+//         break;
+//     case 3:
+//         i = 59 + c;
+//         break;
+//     case 4:
+//         i = 90 + c;
+//         break;
+//     case 5:
+//         i = 120 + c;
+//         break;
+//     case 6:
+//         i = 151 + c;
+//         break;
+//     case 7:
+//         i = 181 + c;
+//         break;
+//     case 8:
+//         i = 212 + c;
+//         break;
+//     case 9:
+//         i = 243 + c;
+//         break;
+//     case 10:
+//         i = 273 + c;
+//         break;
+//     case 11:
+//         i = 304 + c;
+//         break;
+//     case 12:
+//         i = 334 + c;
+//         break;
+//     }
+//     if (a % 400 == 0 && a % 4 == 0 && a % 100 != 0 && b > 2)
+//     {
+//         i++;
+//     }
+//     return i;
+// }
+// int main()
+// {
+//     struct time today = {0};
+//     scanf("%d", &today.year);
+//     scanf("%d", &today.month);
+//     scanf("%d", &today.day);
+//     printf("%d", theday(today.year, today.month, today.day));
+//     return 0;
+// }
+
+// 利用共用体，测试设备大小端。（大小端可自己百度）
+// #include <stdio.h>
+// union text
+// {
+//     char a;
+//     int b;
+// };
+// int main()
+// {
+//     union text text1 = {0};
+//     text1.b = 0x12345678;
+//     printf("%x", text1.a);
+//     return 0;
+// }
+
+// 利用枚举，输入 1~7，输出对于星期几，否则输出 err
+#include <stdio.h>
+enum today
+{
+    monday = 1,
+    tuesday,
+    wednesday,
+    thursday,
+    friday,
+    saturday,
+    sunday
+};
+int main()
+{
+    int i = 0;
+    scanf("%d", &i);
+    if (i < 1 || i > 7)
+    {
+        printf("err");
+    }
+    if (i >= 1 && i <= 7)
+    {
+        switch (day[i])
+            ;
+        {
+        case 1:
+        }
+    }
+}

@@ -344,3 +344,32 @@
 //     for ()
 //         return 0;
 // }
+// #include <stdio.h>
+// int main()
+// {
+//     struct cmplx
+//     {
+//         int x;
+//         int y;
+//     } cnum[2] = {1, 3, 2, 7};
+//     printf("%d\n", cnum[0].y / cnum[0].x * cnum[1].x);
+// }
+// #include <stdio.h>
+// typedef union
+// {
+//     long i;
+//     int k[6];
+//     char c;
+// } DATE;
+// struct data
+// {
+//     int cat;
+//     DATE cow;
+//     double dog;
+// } too;
+// DATE max;
+// int main()
+// {
+//     printf("%d", sizeof(struct data) + sizeof(max));
+//     return 0;
+// }
