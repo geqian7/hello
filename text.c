@@ -1188,7 +1188,7 @@
 //         i = 334 + c;
 //         break;
 //     }
-//     if (a % 400 == 0 && a % 4 == 0 && a % 100 != 0 && b > 2)
+//     if (a % 400 == 0 || a % 4 == 0 && a % 100 != 0 && b > 2)
 //     {
 //         i++;
 //     }
@@ -1220,31 +1220,51 @@
 // }
 
 // 利用枚举，输入 1~7，输出对于星期几，否则输出 err
-#include <stdio.h>
-enum today
-{
-    monday = 1,
-    tuesday,
-    wednesday,
-    thursday,
-    friday,
-    saturday,
-    sunday
-};
-int main()
-{
-    int i = 0;
-    scanf("%d", &i);
-    if (i < 1 || i > 7)
-    {
-        printf("err");
-    }
-    if (i >= 1 && i <= 7)
-    {
-        switch (day[i])
-            ;
-        {
-        case 1:
-        }
-    }
-}
+// #include <stdio.h>
+// enum today
+// {
+//     monday = 1,
+//     tuesday,
+//     wednesday,
+//     thursday,
+//     friday,
+//     saturday,
+//     sunday
+// } day;
+// int main()
+// {
+//     int i = 0;
+//     scanf("%d", &i);
+//     if (i < 1 || i > 7)
+//     {
+//         printf("err");
+//     }
+//     if (i >= 1 && i <= 7)
+//     {
+//         switch (i)
+//         {
+//         case 1:
+//             printf("周一");
+//             break;
+//         case 2:
+//             printf("周二");
+//             break;
+//         case 3:
+//             printf("周三");
+//             break;
+//         case 4:
+//             printf("周四");
+//             break;
+//         case 5:
+//             printf("周五");
+//             break;
+//         case 6:
+//             printf("周六");
+//             break;
+//         case 7:
+//             printf("周天");
+//             break;
+//         }
+//     }
+//     return 0;
+// }
